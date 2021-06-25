@@ -1,12 +1,21 @@
-const express = require('express')
-const app = express()
 
-app.listen(3000, () => {
-    console.log('Servidor rodando na porta 3000')
-})
+// Criar uma porta
+// Criar rota
+// HTTP request
+// Enviar response
+
+
+const express = require("express") // importando express
+
+const app = express() // colocando express disponível para ser usado no arquivo instanciado
 
 app.get("/", (request, response) => {
-    response.status(200).json([{
-        "nome": "oiiiiiiiii"
-    }])
+    console.log("uma requisição foi feita")
+    response.status(200).json("Salve")
+})
+
+
+
+app.listen(8080, () =>{
+    console.log("Meu primeiro servidor rodando na porta 8080")
 })
